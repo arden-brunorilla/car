@@ -9,10 +9,10 @@
         <relativePath/>
     </parent>
     <groupId>com.branacar</groupId>
-    <artifactId>auto-service</artifactId>
+    <artifactId>car-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>auto-service</name>
-    <description>Auto Service</description>
+    <name>car-service</name>
+    <description>Car Service</description>
     <url/>
     <licenses>
         <license/>
