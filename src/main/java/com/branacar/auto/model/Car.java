@@ -1,5 +1,6 @@
 package com.branacar.auto.model;
 
+import com.branacar.auto.model.catalog.Model;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,4 +21,8 @@ public class Car {
     private CarStatus status;
 
     private BigDecimal listPrice;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "model_id", nullable = false)
+    private Model model;
 }

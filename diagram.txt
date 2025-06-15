@@ -1,0 +1,172 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+'──────────────────────────────
+' Enums
+'──────────────────────────────
+enum StockTipo {
+  CENTRAL
+  LOCAL
+}
+enum CarStatus {
+  IN_STOCK
+  RESERVED
+  DELIVERED
+}
+enum SaleStatus {
+  OPEN
+  CLOSED
+  CANCELED
+}
+enum DeliveryStatus {
+  PENDING
+  DELIVERED
+}
+enum MotivoMovimiento {
+  SALE
+  TRANSFER
+  RETURN
+}
+
+'──────────────────────────────
+' Catálogo de vehículos
+'──────────────────────────────
+class Brand {
+  +brandId : UUID
+  +name    : String
+}
+
+class Model {
+  +modelId        : UUID
+  +commercialName : String
+  +segment        : String
+  +modelYear      : int
+}
+
+Brand  "1" -- "1..*" Model : owns
+
+'──────────────────────────────
+' Agregado Car
+'──────────────────────────────
+class Car {
+  +carId     : UUID
+  +vin       : String
+  +status    : CarStatus
+  +listPrice : Money
+}
+
+Model "1" <-- "0..*" Car
+Car  "0..*" --> "1" Stock : location
+
+'──────────────────────────────
+' Stock
+'──────────────────────────────
+abstract class Stock {
+  +stockId   : UUID
+  +tipo      : StockTipo
+  +direccion : String
+}
+class StockCentral <<singleton>>
+class StockLocal {
+  +dealerId : UUID
+}
+
+StockCentral --|> Stock
+StockLocal   --|> Stock
+
+'──────────────────────────────
+' Dealer & Delivery Policy
+'──────────────────────────────
+class Dealer <<aggregate root>> {
+  +dealerId : UUID
+  +name     : String
+  +address  : String
+}
+class DeliveryPolicy {
+  +policyId  : UUID
+  +source    : StockTipo
+  +days      : int
+}
+
+Dealer "1" -- "1" StockLocal
+Dealer "1" -- "1..*" DeliveryPolicy
+
+'──────────────────────────────
+' Post-sale services
+'──────────────────────────────
+class MaintenanceService {
+  +serviceId : UUID
+  +date      : Date
+  +km        : int
+}
+class WarrantyService {
+  +serviceId : UUID
+  +date      : Date
+}
+
+Car "1" -- "0..*" MaintenanceService
+Car "1" -- "0..*" WarrantyService
+
+'──────────────────────────────
+' Stock movement
+'──────────────────────────────
+class StockMovement {
+  +moveId  : UUID
+  +date    : Timestamp
+  +reason  : MotivoMovimiento
+}
+StockMovement "N" -- "1" Car
+StockMovement "N" -- "1" Stock : origin
+StockMovement "N" -- "1" Stock : destination
+
+'──────────────────────────────
+' Aggregate Sale
+'──────────────────────────────
+class Client {
+  +clientId : UUID
+  +dni      : String
+  +name     : String
+}
+class Employee {
+  +employeeId : UUID
+  +name       : String
+  +role       : String
+  +dealerId   : UUID
+}
+
+class Sale {
+  +saleId   : UUID
+  +date     : Date
+  +status   : SaleStatus
+  +subtotal : Money
+  +discount : Money
+  +total    : Money
+}
+class SaleItem {
+  +itemId         : UUID
+  +agreedPrice    : Money
+  +lineDiscount   : Money
+  +lineTaxes      : Money
+  +lineSubtotal   : Money
+  +promisedDate   : Date
+  +deliveryStatus : DeliveryStatus
+}
+
+Sale "1" -- "1..*" SaleItem
+SaleItem "1" -- "1" Car
+Sale  "0..*" -- "1" Client
+Sale  "0..*" -- "1" Employee
+
+'──────────────────────────────
+' Invariant notes
+'──────────────────────────────
+note right of Car
+  • Un Car/Auto pertenece exactamente a un (1) Stock.\n
+  • VIN is unique key.
+end note
+
+note right of Sale
+  • total = Σ(SaleItem.lineSubtotal).\n
+  • Un Car/Auto puede aparecer en, como mucho, un (1) SaleItem abierto.
+end note
+@enduml

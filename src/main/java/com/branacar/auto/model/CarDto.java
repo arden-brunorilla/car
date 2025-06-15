@@ -6,15 +6,19 @@ import java.util.UUID;
 public record CarDto(
         UUID carId,
         String vin,
-        CarStatus status,
-        BigDecimal listPrice
+        String status,
+        BigDecimal listPrice,
+        String modelName,
+        String brandName
 ) {
     public static CarDto from(Car car) {
         return new CarDto(
                 car.getCarId(),
                 car.getVin(),
-                car.getStatus(),
-                car.getListPrice()
+                car.getStatus().name(),
+                car.getListPrice(),
+                car.getModel().getCommercialName(),
+                car.getModel().getBrand().getName()
         );
     }
 }

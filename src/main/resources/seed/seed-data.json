@@ -1,0 +1,352 @@
+{
+  "brands": [
+    {
+      "brandId": "a1e4f3c1-45d9-4b11-842e-fd5a356bd7c1",
+      "name": "Toyota",
+      "models": [
+        {
+          "model_id": "1a2b3c4d-0001-4f92-b50f-7b8571a978ab",
+          "commercialName": "Corolla",
+          "segment": "C",
+          "modelYear": 2023,
+          "cars": [
+            {
+              "carId": "d1e1f1a1-0001-478a-bc58-8a865d9e2299",
+              "vin": "JTDBR32E530050123",
+              "status": "IN_STOCK",
+              "listPrice": 27500000
+            },
+            {
+              "carId": "d1e1f1a1-0002-478a-bc58-8a865d9e2299",
+              "vin": "JTDBR32E530050124",
+              "status": "IN_STOCK",
+              "listPrice": 27800000
+            },
+            {
+              "carId": "d1e1f1a1-0003-478a-bc58-8a865d9e2299",
+              "vin": "JTDBR32E530050125",
+              "status": "IN_STOCK",
+              "listPrice": 28000000
+            }
+          ]
+        },
+        {
+          "model_id": "1a2b3c4d-0002-4f92-b50f-7b8571a978ab",
+          "commercialName": "Yaris",
+          "segment": "B",
+          "modelYear": 2024,
+          "cars": [
+            {
+              "carId": "d1e1f1a1-0004-478a-bc58-8a865d9e2299",
+              "vin": "VNKKC3D350A001234",
+              "status": "IN_STOCK",
+              "listPrice": 24500000
+            },
+            {
+              "carId": "d1e1f1a1-0005-478a-bc58-8a865d9e2299",
+              "vin": "VNKKC3D350A001235",
+              "status": "IN_STOCK",
+              "listPrice": 24700000
+            },
+            {
+              "carId": "d1e1f1a1-0006-478a-bc58-8a865d9e2299",
+              "vin": "VNKKC3D350A001236",
+              "status": "IN_STOCK",
+              "listPrice": 24800000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "9d8c5a3b-b0f9-47b4-8a8d-f4cfb04cb4bb",
+      "name": "Ford",
+      "models": [
+        {
+          "model_id": "ac9f0023-0001-46c5-9a29-3195b16579c2",
+          "commercialName": "Fiesta",
+          "segment": "B",
+          "modelYear": 2022,
+          "cars": [
+            {
+              "carId": "abc123ef-0001-49ef-bb4a-f01a3db2c111",
+              "vin": "3FADP4BJ6FM143210",
+              "status": "IN_STOCK",
+              "listPrice": 23000000
+            },
+            {
+              "carId": "abc123ef-0002-49ef-bb4a-f01a3db2c111",
+              "vin": "3FADP4BJ6FM143211",
+              "status": "IN_STOCK",
+              "listPrice": 23100000
+            },
+            {
+              "carId": "abc123ef-0003-49ef-bb4a-f01a3db2c111",
+              "vin": "3FADP4BJ6FM143212",
+              "status": "IN_STOCK",
+              "listPrice": 23200000
+            }
+          ]
+        },
+        {
+          "model_id": "ac9f0023-0002-46c5-9a29-3195b16579c2",
+          "commercialName": "Ranger",
+          "segment": "PICKUP",
+          "modelYear": 2025,
+          "cars": [
+            {
+              "carId": "abc123ef-0004-49ef-bb4a-f01a3db2c111",
+              "vin": "1FTER1FH1KLA00101",
+              "status": "IN_STOCK",
+              "listPrice": 39000000
+            },
+            {
+              "carId": "abc123ef-0005-49ef-bb4a-f01a3db2c111",
+              "vin": "1FTER1FH1KLA00102",
+              "status": "IN_STOCK",
+              "listPrice": 39500000
+            },
+            {
+              "carId": "abc123ef-0006-49ef-bb4a-f01a3db2c111",
+              "vin": "1FTER1FH1KLA00103",
+              "status": "IN_STOCK",
+              "listPrice": 39800000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "11cfc2b5-690f-4c91-a823-36f55b63c4dc",
+      "name": "Volkswagen",
+      "models": [
+        {
+          "model_id": "c1c2c3c4-0001-4f92-b50f-7b8571a978ab",
+          "commercialName": "Gol",
+          "segment": "B",
+          "modelYear": 2023,
+          "cars": [
+            {
+              "carId": "vwcar-001-0001-1234abcd",
+              "vin": "9BWZZZ377VT004251",
+              "status": "IN_STOCK",
+              "listPrice": 22000000
+            },
+            {
+              "carId": "vwcar-001-0002-1234abcd",
+              "vin": "9BWZZZ377VT004252",
+              "status": "IN_STOCK",
+              "listPrice": 22200000
+            },
+            {
+              "carId": "vwcar-001-0003-1234abcd",
+              "vin": "9BWZZZ377VT004253",
+              "status": "IN_STOCK",
+              "listPrice": 22300000
+            }
+          ]
+        },
+        {
+          "model_id": "c1c2c3c4-0002-4f92-b50f-7b8571a978ab",
+          "commercialName": "T-Cross",
+          "segment": "SUV",
+          "modelYear": 2024,
+          "cars": [
+            {
+              "carId": "vwcar-002-0001-1234abcd",
+              "vin": "3VW2B7AJ5EM360001",
+              "status": "IN_STOCK",
+              "listPrice": 36000000
+            },
+            {
+              "carId": "vwcar-002-0002-1234abcd",
+              "vin": "3VW2B7AJ5EM360002",
+              "status": "IN_STOCK",
+              "listPrice": 36200000
+            },
+            {
+              "carId": "vwcar-002-0003-1234abcd",
+              "vin": "3VW2B7AJ5EM360003",
+              "status": "IN_STOCK",
+              "listPrice": 36300000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "4c112c8e-0703-45ec-a82e-5c915b71241b",
+      "name": "BMW",
+      "models": [
+        {
+          "model_id": "b1b2b3b4-0001-4f92-b50f-7b8571a978ab",
+          "commercialName": "320i",
+          "segment": "D",
+          "modelYear": 2024,
+          "cars": [
+            {
+              "carId": "bmwcar-0001-1111-2222abcd",
+              "vin": "WBA8E9G55GNU04567",
+              "status": "IN_STOCK",
+              "listPrice": 72000000
+            },
+            {
+              "carId": "bmwcar-0002-1111-2222abcd",
+              "vin": "WBA8E9G55GNU04568",
+              "status": "IN_STOCK",
+              "listPrice": 72500000
+            },
+            {
+              "carId": "bmwcar-0003-1111-2222abcd",
+              "vin": "WBA8E9G55GNU04569",
+              "status": "IN_STOCK",
+              "listPrice": 73000000
+            }
+          ]
+        },
+        {
+          "model_id": "b1b2b3b4-0002-4f92-b50f-7b8571a978ab",
+          "commercialName": "X1",
+          "segment": "SUV",
+          "modelYear": 2025,
+          "cars": [
+            {
+              "carId": "bmwcar-0004-1111-2222abcd",
+              "vin": "WBAVL1C54EVY12345",
+              "status": "IN_STOCK",
+              "listPrice": 88000000
+            },
+            {
+              "carId": "bmwcar-0005-1111-2222abcd",
+              "vin": "WBAVL1C54EVY12346",
+              "status": "IN_STOCK",
+              "listPrice": 88500000
+            },
+            {
+              "carId": "bmwcar-0006-1111-2222abcd",
+              "vin": "WBAVL1C54EVY12347",
+              "status": "IN_STOCK",
+              "listPrice": 89000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "6f8d9c7a-bb22-4e90-bd17-1e805b91c4ab",
+      "name": "Tesla",
+      "models": [
+        {
+          "model_id": "t1t2t3t4-0001-4f92-b50f-7b8571a978ab",
+          "commercialName": "Model 3",
+          "segment": "D",
+          "modelYear": 2025,
+          "cars": [
+            {
+              "carId": "teslacar-0001-aaaa-bbbbcccc",
+              "vin": "5YJ3E1EA7JF000001",
+              "status": "IN_STOCK",
+              "listPrice": 98000000
+            },
+            {
+              "carId": "teslacar-0002-aaaa-bbbbcccc",
+              "vin": "5YJ3E1EA7JF000002",
+              "status": "IN_STOCK",
+              "listPrice": 98500000
+            },
+            {
+              "carId": "teslacar-0003-aaaa-bbbbcccc",
+              "vin": "5YJ3E1EA7JF000003",
+              "status": "IN_STOCK",
+              "listPrice": 99000000
+            }
+          ]
+        },
+        {
+          "model_id": "t1t2t3t4-0002-4f92-b50f-7b8571a978ab",
+          "commercialName": "Model Y",
+          "segment": "SUV",
+          "modelYear": 2024,
+          "cars": [
+            {
+              "carId": "teslacar-0004-aaaa-bbbbcccc",
+              "vin": "5YJYGDEE0LF000001",
+              "status": "IN_STOCK",
+              "listPrice": 105000000
+            },
+            {
+              "carId": "teslacar-0005-aaaa-bbbbcccc",
+              "vin": "5YJYGDEE0LF000002",
+              "status": "IN_STOCK",
+              "listPrice": 106000000
+            },
+            {
+              "carId": "teslacar-0006-aaaa-bbbbcccc",
+              "vin": "5YJYGDEE0LF000003",
+              "status": "IN_STOCK",
+              "listPrice": 107000000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "brandId": "f3c4d5e6-3344-4f92-aeef-9cf047df32aa",
+      "name": "Hyundai",
+      "models": [
+        {
+          "model_id": "hyu-0001-4f92-aeef-000000000001",
+          "commercialName": "i20",
+          "segment": "B",
+          "modelYear": 2023,
+          "cars": [
+            {
+              "carId": "hyucar-0001-aabb-ccdd",
+              "vin": "MALBM51BLHM012345",
+              "status": "IN_STOCK",
+              "listPrice": 24000000
+            },
+            {
+              "carId": "hyucar-0002-aabb-ccdd",
+              "vin": "MALBM51BLHM012346",
+              "status": "IN_STOCK",
+              "listPrice": 24200000
+            },
+            {
+              "carId": "hyucar-0003-aabb-ccdd",
+              "vin": "MALBM51BLHM012347",
+              "status": "IN_STOCK",
+              "listPrice": 24300000
+            }
+          ]
+        },
+        {
+          "model_id": "hyu-0002-4f92-aeef-000000000002",
+          "commercialName": "Tucson",
+          "segment": "SUV",
+          "modelYear": 2024,
+          "cars": [
+            {
+              "carId": "hyucar-0004-aabb-ccdd",
+              "vin": "KMHJB81DLJU123456",
+              "status": "IN_STOCK",
+              "listPrice": 46000000
+            },
+            {
+              "carId": "hyucar-0005-aabb-ccdd",
+              "vin": "KMHJB81DLJU123457",
+              "status": "IN_STOCK",
+              "listPrice": 46200000
+            },
+            {
+              "carId": "hyucar-0006-aabb-ccdd",
+              "vin": "KMHJB81DLJU123458",
+              "status": "IN_STOCK",
+              "listPrice": 46300000
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
