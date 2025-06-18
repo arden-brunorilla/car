@@ -22,6 +22,9 @@ public class Car {
 
     private BigDecimal listPrice;
 
+    @Column(name = "stock_id", nullable = false)
+    private UUID stockId;
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "model_id", nullable = false)
     private Model model;

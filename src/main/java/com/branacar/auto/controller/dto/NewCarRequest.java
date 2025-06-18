@@ -7,5 +7,6 @@ import java.util.UUID;
 public record NewCarRequest(
         @NotNull UUID modelId,
         @NotBlank String vin,
-        @DecimalMin("0.0") BigDecimal listPrice
+        @DecimalMin("0.0") BigDecimal listPrice,
+        @NotNull UUID stockId
 ) { }

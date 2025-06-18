@@ -32,6 +32,8 @@ public class CatalogSeeder {
         return args -> {
             if (brandRepo.count() > 0) return;
 
+            UUID stockCentro = UUID.fromString("aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee");
+
             try (InputStream in = getClass().getResourceAsStream("/seed/seed-data.json")) {
                 JsonNode root = mapper.readTree(in);
 
@@ -59,6 +61,7 @@ public class CatalogSeeder {
                                             .vin(c.get("vin").asText())
                                             .status(CarStatus.valueOf(c.get("status").asText()))
                                             .listPrice(new BigDecimal(c.get("listPrice").asText()))
+                                            .stockId(stockCentro)
                                             .model(model)
                                             .build());
                         }
