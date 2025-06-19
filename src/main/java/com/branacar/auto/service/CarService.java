@@ -27,6 +27,12 @@ public class CarService {
                 .toList();
     }
 
+    public List<CarDto> findAll() {
+        return carRepo.findAll().stream()
+                .map(CarDto::from)
+                .toList();
+    }
+
     @Transactional
     public void updateLocation(UUID carId, UUID stockId) {
         Car car = carRepo.findById(carId)

@@ -1,7 +1,10 @@
 package com.branacar.auto.controller;
 
+import com.branacar.auto.controller.dto.NewCarRequest;
+import com.branacar.auto.model.Car;
 import com.branacar.auto.model.CarDto;
 import com.branacar.auto.service.CarService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -28,9 +31,19 @@ public class CarController {
         return ResponseEntity.ok().build();
     }
 
+    @GetMapping
+    public List<CarDto> findAll() {
+        return service.findAll();
+    }
 
     @GetMapping("/{id}")
     public ResponseEntity<CarDto> getCar(@PathVariable UUID id) {
         return ResponseEntity.ok( CarDto.from(service.getCar(id)) );
+    }
+
+    @PostMapping
+    public ResponseEntity<CarDto> createCar(@Valid @RequestBody NewCarRequest req) {
+        Car car = service.createCar(req);
+        return ResponseEntity.ok(CarDto.from(car));
     }
 }
