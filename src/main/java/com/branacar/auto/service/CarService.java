@@ -16,7 +16,7 @@ import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
-public class CarService {
+public class CarService implements ICarService {
 
     private final CarRepository carRepo;
     private final ModelRepository modelRepo;
