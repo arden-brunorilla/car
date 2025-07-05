@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service @RequiredArgsConstructor
-public class BrandService {
+public class BrandService implements IBrandService {
 
     private final BrandRepository repo;
 

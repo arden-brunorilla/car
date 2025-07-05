@@ -3,6 +3,7 @@ package com.branacar.auto.controller;
 import com.branacar.auto.controller.dto.NewCarRequest;
 import com.branacar.auto.model.Car;
 import com.branacar.auto.model.CarDto;
+import com.branacar.auto.service.ICarService;
 import com.branacar.auto.service.CarService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -17,7 +18,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class CarController {
 
-    private final CarService service;
+    private final ICarService service;
 
     @GetMapping("/by-stock/{stockId}")
     public List<CarDto> byStock(@PathVariable UUID stockId) {

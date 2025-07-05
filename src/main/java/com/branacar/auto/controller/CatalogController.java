@@ -1,6 +1,8 @@
 package com.branacar.auto.controller;
 
 import com.branacar.auto.controller.dto.*;
+import com.branacar.auto.service.IBrandService;
+import com.branacar.auto.service.IModelService;
 import com.branacar.auto.service.BrandService;
 import com.branacar.auto.service.ModelService;
 import jakarta.validation.Valid;
@@ -15,8 +17,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CatalogController {
 
-    private final BrandService brandService;
-    private final ModelService modelService;
+    private final IBrandService brandService;
+    private final IModelService modelService;
 
     // Brand
     @PostMapping("/brands")

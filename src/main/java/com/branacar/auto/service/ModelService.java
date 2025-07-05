@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Service @RequiredArgsConstructor
-public class ModelService {
+public class ModelService implements IModelService {
 
     private final ModelRepository modelRepo;
     private final BrandRepository brandRepo;
